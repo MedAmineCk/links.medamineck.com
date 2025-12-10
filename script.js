@@ -146,12 +146,12 @@ function trackEvent(action, label) {
   console.log(`Event: ${action}, Label: ${label}`);
   
   // Example: Google Analytics
-  // if (typeof gtag !== 'undefined') {
-  //   gtag('event', action, {
-  //     'event_category': 'engagement',
-  //     'event_label': label
-  //   });
-  // }
+  if (typeof gtag !== 'undefined') {
+    gtag('event', action, {
+      'event_category': 'engagement',
+      'event_label': label
+    });
+  }
 }
 
 // Track link clicks
